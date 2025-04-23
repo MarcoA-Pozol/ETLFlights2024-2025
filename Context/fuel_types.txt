@@ -1,0 +1,24 @@
+✅ Primary Jet Fuels Used in Commercial Aviation:
+1. Jet A
+Used in: Primarily the United States
+Freezing point: -40°C
+Flash point: ~38°C
+Application: Domestic U.S. commercial flights
+Aircraft: Boeing 737, 777, 787; Airbus A320, A350; Embraer E-Jets, etc.
+
+2. Jet A-1
+Used in: Internationally (Europe, Asia, Australia, Latin America, etc.)
+Freezing point: -47°C (better suited for long-haul and high-altitude flights)
+Flash point: ~38°C
+Application: Global standard for international and intercontinental commercial aviation
+Aircraft: Same as above — all major commercial jets
+
+🔄 What's the difference?
+Jet A vs. Jet A-1: They are nearly identical, but Jet A-1 has a lower freezing point, making it better for long-haul or high-altitude international routes.
+Airlines will refuel based on availability at airports — e.g., a U.S. airline flying internationally will often use Jet A-1 outside the U.S.
+
+🌿 Bonus: Sustainable Aviation Fuel (SAF)
+Type: Biofuels or synthetic paraffinic kerosene
+Blended with: Jet A/Jet A-1 up to 50%
+Used by: Airlines like United, Lufthansa, KLM, and British Airways are already using SAF on some flights
+Purpose: Reduce carbon footprint and reliance on fossil fuels
