@@ -21,3 +21,7 @@ df = pd.DataFrame([
 # df = df[df['Column'] != 'Results'] 
 df.drop(df[df['Column'] == 'Results'].index, inplace=True) # In-place
 print(df)
+
+# Save df as json
+output_path = './DataSets/unique_column_values.json'
+df.to_json(output_path, orient='records', indent=4) # Indent makes the file pretty and human readable | orient makes each row becomes a JSON object in a list
