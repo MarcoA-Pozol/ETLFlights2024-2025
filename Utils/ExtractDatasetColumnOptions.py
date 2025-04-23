@@ -13,6 +13,6 @@ def extract_dataset_column_options(filepath:str) -> dict:
     # Create a dict 
     unique_values = {
         col: df[col].dropna().unique().tolist()
-        for col in df.select_dtypes(exclude=['number']).columns
+        for col in df.select_dtypes('object').columns # (exclude=['number'])
     }
     return unique_values

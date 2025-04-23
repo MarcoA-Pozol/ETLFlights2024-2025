@@ -16,4 +16,8 @@ df = pd.DataFrame([
     {'Column':k, 'Values':v}
     for k, v in column_values.items()
 ])
+
+# Remove row where in 'Column' column we have 'Results'
+# df = df[df['Column'] != 'Results'] 
+df.drop(df[df['Column'] == 'Results'].index, inplace=True) # In-place
 print(df)
