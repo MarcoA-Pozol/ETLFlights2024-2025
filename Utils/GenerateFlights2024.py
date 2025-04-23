@@ -33,35 +33,36 @@ sample_values = {
     "Delay Reason": ["-", "Weather", "Technical Issues", "Air Traffic Control", "Crew Availability"]
 }
 
-# Generate the dataset
-num_flights = 1500
-flights_data = []
+paths = ["./DataSets/flights_2024A.csv", "./DataSets/flights_2024B.csv", "./DataSets/flights_2024C.csv", "./DataSets/flights_2024D.csv", "./DataSets/flights_2024E.csv", "./DataSets/flights_2024F.csv", "./DataSets/flights_2024G.csv", "./DataSets/flights_2024H.csv", "./DataSets/flights_2024I.csv", "./DataSets/flights_2024J.csv", "./DataSets/flights_2024K.csv", "./DataSets/flights_2024L.csv"]
+for path in paths:
+    # Generate the dataset
+    num_flights = 1500
+    flights_data = []
 
-start_date = datetime(2024, 1, 1)
-for _ in range(num_flights):
-    flight = {
-        "Airline": random.choice(sample_values["Airline"]),
-        "Airplane Model": random.choice(sample_values["Airplane Model"]),
-        "Origin": random.choice(sample_values["Origin"]),
-        "Destination": random.choice(sample_values["Destination"]),
-        "Date": (start_date + timedelta(days=random.randint(0, 364))).strftime("%Y-%m-%d"),
-        "Flight Type": random.choice(sample_values["Flight Type"]),
-        "Pilot Name": random.choice(sample_values["Pilot Name"]),
-        "Departure Time": f"{random.randint(0, 23):02}:{random.choice([0, 15, 30, 45]):02}:00",
-        "Flight Status": random.choice(sample_values["Flight Status"]),
-        "Delay Minutes": random.choice([0, 5, 10, 15, 20, 25, 30, "-", 45, 60]),
-        "Fuel Type": random.choice(sample_values["Fuel Type"]),
-        "Service Class": random.choice(sample_values["Service Class"]),
-        "Delay Reason": random.choice(sample_values["Delay Reason"])
-    }
-    flights_data.append(flight)
+    start_date = datetime(2024, 1, 1)
+    for _ in range(num_flights):
+        flight = {
+            "Airline": random.choice(sample_values["Airline"]),
+            "Airplane Model": random.choice(sample_values["Airplane Model"]),
+            "Origin": random.choice(sample_values["Origin"]),
+            "Destination": random.choice(sample_values["Destination"]),
+            "Date": (start_date + timedelta(days=random.randint(0, 364))).strftime("%Y-%m-%d"),
+            "Flight Type": random.choice(sample_values["Flight Type"]),
+            "Pilot Name": random.choice(sample_values["Pilot Name"]),
+            "Departure Time": f"{random.randint(0, 23):02}:{random.choice([0, 15, 30, 45]):02}:00",
+            "Flight Status": random.choice(sample_values["Flight Status"]),
+            "Delay Minutes": random.choice([0, 5, 10, 15, 20, 25, 30, "-", 45, 60]),
+            "Fuel Type": random.choice(sample_values["Fuel Type"]),
+            "Service Class": random.choice(sample_values["Service Class"]),
+            "Delay Reason": random.choice(sample_values["Delay Reason"])
+        }
+        flights_data.append(flight)
 
-# Create a DataFrame
-flights_df = pd.DataFrame(flights_data)
+    # Create a DataFrame
+    flights_df = pd.DataFrame(flights_data)
 
-# Save to CSV
-output_path = "./DataSets/flights_2024.csv"
-os.makedirs(os.path.dirname(output_path), exist_ok=True)
-flights_df.to_csv(output_path, index=False)
+    # Save to CSV
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    flights_df.to_csv(path, index=False)
 
-output_path
+    path
